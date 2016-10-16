@@ -9,8 +9,45 @@
         android:layout_height="match_parent">
         <LinearLayout android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
 
+            <EditText
+                android:id="@+id/form1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type a NOUN"/>
+            <EditText
+                android:id="@+id/form2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type another NOUN"/>
+            <EditText
+                android:id="@+id/form3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type an ADJECTIVE"/>
+            <EditText
+                android:id="@+id/form4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type another ADJECTIVE"/>
+            <EditText
+                android:id="@+id/form5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type an ANIMAL(PLURAL)"/>
+            <EditText
+                android:id="@+id/form6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type the NAME OF A GAME"/>
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:gravity="center_horizontal"/>
         </LinearLayout>
     </ScrollView>
 </FrameLayout>
