@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText mAnimal;
     private EditText mGame;
     private Button mSubmit;
+    private Button mClear;
 
     EditText[] words = new EditText[6];
 
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         mAnimal = (EditText) findViewById(R.id.form5);
         mGame = (EditText) findViewById(R.id.form6);
         mSubmit = (Button) findViewById(R.id.submit);
+        mClear = (Button) findViewById(R.id.clear);
 
         mSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +48,13 @@ public class MainActivity extends AppCompatActivity {
                 words[4] = mAnimal;
                 words[5] = mGame;
 
+                for (EditText wordCheck : words) {
+                    if(!(wordCheck.getText().toString().trim().length() > 0)){
+                        wordCheck.setError("Must be a word.");
+                        return;
+                    }
+                }
+
                 String[] wordsToTransfer = new String[6];
 
                 for (int i = 0; i < words.length; i++) {
@@ -55,6 +64,18 @@ public class MainActivity extends AppCompatActivity {
                 Intent transferWords = new Intent(MainActivity.this, ResultActivity.class);
                 transferWords.putExtra("WORDS", wordsToTransfer);
                 startActivity(transferWords);
+            }
+        });
+
+        mClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mNoun1.setText("");
+                mNoun2.setText("");
+                mAdjective1.setText("");
+                mAdjective2.setText("");
+                mAnimal.setText("");
+                mGame.setText("");
             }
         });
 

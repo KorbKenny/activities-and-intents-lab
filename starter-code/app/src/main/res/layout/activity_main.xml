@@ -48,6 +48,11 @@
                 android:layout_height="wrap_content"
                 android:text="Submit"
                 android:gravity="center_horizontal"/>
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Clear" />
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

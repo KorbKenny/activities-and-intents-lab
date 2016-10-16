@@ -28,7 +28,13 @@ public class ResultActivity extends AppCompatActivity {
         String[] theWords = getThem.getStringArrayExtra("WORDS");
 
         mResults = (TextView) findViewById(R.id.result_textview);
-        mResults.setText("Hello");
+        mResults.setText(Html.fromHtml("The two were running through the jungle as fast as they could, away from the <b>" +theWords[4] +
+                "</b> that were quickly catching up to them. Suddenly, they tripped over a large <b>" + theWords[0] +
+                "</b> on the path, and they tumbled off an extremely high and extremely <b>" + theWords[2] + "</b> cliff. The two really hoped" +
+                "that they didn't land on a <b>" + theWords[1] + "</b> or anything like that. \"This is pretty <b>" + theWords[3] +
+        "</b>, wouldn'tcha say?\" Jeffery said to Janet. Both got bored while falling and started to play <b>" + theWords[5]
+        + "</b> on the way down. They got through two full games before safely landing on a large stack of pillows, where they got through one more game."));
+
 
 
         mBackButton = (Button) findViewById(R.id.back_button);
